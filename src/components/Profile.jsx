@@ -36,9 +36,13 @@ function Profile(){
                 console.log("updated Successfully")
             }
             if (data.user && data.user.profileImage) {
-                    const cleanPath = data.user.profileImage.replace(/\\/g, "/");
-                    setPhoto(`https://study-hub-production-4e64.up.railway.app/${cleanPath}`);
-      }
+    const imgPath = data.user.profileImage.replace(/\\/g, "/");
+    const fullUrl = imgPath.startsWith("http") 
+        ? imgPath 
+        : `https://study-hub-production-4e64.up.railway.app/${imgPath.replace(/^\//, '')}`;
+        
+    setPhoto(fullUrl);
+}
 
         }catch(e){
             console.log("Network error ",e)
@@ -64,10 +68,14 @@ function Profile(){
         const data = await response.json()
         setUserName(data.userName || data.name  ||"user");
 
-        if (data.profileImage && data.profileImage !== "default-avatar.png") {
-            const cleanPath = data.profileImage.replace(/\\/g, "/");
-            setPhoto(`https://study-hub-production-4e64.up.railway.app${cleanPath}`);
-      }
+            if (data.profileImage && data.profileImage !== "default-avatar.png") {
+    const imgPath = data.profileImage.replace(/\\/g, "/");
+    const fullUrl = imgPath.startsWith("http") 
+        ? imgPath 
+        : `https://study-hub-production-4e64.up.railway.app/${imgPath.replace(/^\//, '')}`;
+        
+    setPhoto(fullUrl);
+}
         }catch(e){
             console.log(e);
         }finally{
