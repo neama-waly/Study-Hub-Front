@@ -36,12 +36,8 @@ function Profile(){
                 console.log("updated Successfully")
             }
             if (data.user && data.user.profileImage) {
-    const imgPath = data.user.profileImage.replace(/\\/g, "/");
-    const fullUrl = imgPath.startsWith("http") 
-        ? imgPath 
-        : `https://study-hub-production-4e64.up.railway.app/${imgPath.replace(/^\//, '')}`;
-        
-    setPhoto(fullUrl);
+                    console.log("IMAGE FROM BACKEND:", data.user.profileImage);
+                    setPhoto(data.user.profileImage);
 }
 
         }catch(e){
