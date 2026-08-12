@@ -1,0 +1,519 @@
+*{
+    box-sizing: border-box;
+}
+.main-content{
+    flex: 1;
+    width: 100%;
+}
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #334155 ;  
+}
+.title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 60px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 20px;
+    gap:15px;
+}
+.address{
+    margin-right: auto ;
+    font-size: 25px;
+    color:#03a17c;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    width: 100%;
+    max-width: 600px;
+    justify-content: flex-end;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 40px;
+    flex: 1;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+.search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    
+}
+.icon-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.nav_bar img , .icon-btn img{
+    width: 20px ;
+    height: 20px;
+    margin-right: 0;
+    
+}
+.nav_bar{
+    display: flex ;
+    flex-direction: column;
+    width: 220px;
+    min-width: 200px;
+    height: fit-content;
+    padding: 15px 10px;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: rgba(238, 194, 205, 0.307);
+}
+.nav_bar button {
+    background-color: transparent;
+    border: none ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+button:hover{
+    background-color: rgba(128, 128, 128, 0.135);
+}
+.welcome{
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+.mainpage{
+    display: flex;
+    gap:20px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.btn{
+    height: 40px;
+    width: 150px;
+    background-color:rgba(238, 194, 205, 0.507) ;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.welcome p{
+    margin-bottom: 20px; 
+    margin-left: 5px;
+    max-width: 70%;
+    line-height: 1.6;
+}
+.stitch{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;     
+    width: 30%;
+    height: 100%;
+    pointer-events: none;
+}
+.notes , .courses {
+    width: 100%;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill , minmax(220px,1fr));
+    gap:20px;
+    width: 100% ;   
+}
+.noteCard {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    transition: transform 0.2s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+.noteCard:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.noteTitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0f172a;
+   margin: 0;
+   word-break: break-word ;
+   overflow-wrap: break-word;
+   white-space: pre-wrap;
+}
+.noteContent{
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+    
+}
+.addNote ,.addQuestionbtn{
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 15px;
+    background-color: rgba(238, 194, 205, 0.6);
+    color: #4a0404;
+}
+
+form{
+    background: #f8fafc;
+    padding : 20px;
+    border-radius : 12px ;
+    border: 1px solid #e2e8f0 ;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column ;
+    gap: 12px ;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 650px;
+}
+.inputForm , textarea, select{
+    width: 100%;
+    padding: 12px ;
+    border-radius: 8px ;
+    border:1px solid #cbd5e1;
+    font-size: 0.95rem ;
+    outline: none;
+}
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+.formbtn{
+    padding: 12px ;
+    background: #10b981;
+    color: #fff ;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 600;
+}
+.deletebtn{
+    background-color : #700909 ;
+    color : white ;
+    font-size :bold;
+    border : none;
+    border-radius :12px;
+    margin-top: auto;
+}
+.Login{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center;
+    color: #ffffff;   
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    width: 380px;
+    padding: 40px 30px;
+    margin: 50px auto;
+    border-radius: 20px;
+}
+.Login h1, .Login p {
+    text-align: center;
+    color: #095f42;
+    margin-bottom: 10px;
+}
+.Login input{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid #10b981;;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+.Login input:hover{
+    border-bottom: 3px solid #095f42;
+}
+.Login button{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    height: 35px;
+    border: none;
+    font-weight: bold;
+    background-color: #10b981;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;    
+}
+.Login button:hover{
+    background-color: #095f42;
+    transform: scale(1.03);
+}
+.profile{
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.profile h1{
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.profile .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fce4ec;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+.avatar:hover{
+    transform: scale(1.05);
+}
+
+.courseCard{
+    
+    background-color: white;
+    border: 1px solid #eef2f6;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.2s ease-in-out;
+    flex-wrap: wrap;
+    clear: both;
+}
+.courseCard:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.cardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badge{
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.deleteCoursebtn{
+    background:transparent ;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.deleteCoursebtn:hover{
+    opacity: 1;
+}
+.top-actions{
+    display: flex;
+    gap : 10px;
+    margin-bottom: 25px;
+}
+.resourceBox{
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.fileTypeBadge{
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 11px;
+    padding: 2px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.link{
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+.link:hover{
+    text-decoration: underline;
+}
+.progressContainer{
+    margin-top: 4px;
+}
+.progressHeader{
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+.progressBar{
+    background: #f3f4f6;
+    height: 6px ;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progressBarFill{
+    background: #0284c7;
+    height: 100%;
+    border-radius: 10px;
+}
+.upload-badge{
+    background-color: #10b981;
+    color: white;
+    margin-top: -60px;
+    margin-right: -100px ;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.upload-badge:hover{
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+    .nav_bar {
+        width: 180px;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 80px !important;
+    }
+
+    .mainpage {
+        flex-direction: column;
+        padding: 0 15px;
+        margin-top: 10px;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .actions {
+        width: 100%;
+        max-width: 100%;
+    }
+
+   
+    .nav_bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important; 
+        width: 100% !important;
+        height: 65px !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1) !important;
+        border-radius: 18px 18px 0 0 !important; 
+        
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-around !important; 
+        align-items: center !important;
+        
+        padding: 0 5px !important;
+        margin: 0 !important;
+        z-index: 9999 !important; 
+        overflow: hidden !important; 
+    }
+    .nav_bar button {
+        flex: 1 !important; 
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        justify-content: center !important;
+        
+        gap: 2px !important;
+        padding: 6px 2px !important;
+        height: 100% !important;
+        width: auto !important;
+        
+        background: transparent !important;
+        border-radius: 10px !important;
+        font-size: 10px !important; 
+        font-weight: 600;
+        color: #475569;
+        white-space: nowrap; 
+    }
+
+    .nav_bar button img,
+    .nav_bar button svg {
+        width: 22px !important;
+        height: 22px !important;
+        margin: 0 !important;
+    }
+
+    .nav_bar button:hover, 
+    .nav_bar button:active {
+        background-color: rgba(238, 194, 205, 0.25) !important;
+        color: #0f172a;
+    }
+    .welcome p {
+        max-width: 100%;
+    }
+    .stitch {
+        display: none; 
+    }
+    .notes, .courses {
+        grid-template-columns: 1fr; 
+    }
+}
