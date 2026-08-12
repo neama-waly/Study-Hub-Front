@@ -28,7 +28,7 @@ function Courses(){
         try{
             const token = localStorage.getItem("token");
             setLoading(true);
-            const response = await fetch(`study-hub-production-4e64.up.railway.app/api/materials?search=${encodeURIComponent(query)}`,{
+            const response = await fetch(`https://study-hub-production-4e64.up.railway.app/api/materials?search=${encodeURIComponent(query)}`,{
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`, 
@@ -66,7 +66,7 @@ function Courses(){
 
 
         try{
-            const response = await fetch("study-hub-production-4e64.up.railway.app/api/materials",{
+            const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/materials",{
                 method : "POST",
                 headers : {
                     "Authorization": `Bearer ${token}`
@@ -96,7 +96,7 @@ function Courses(){
     const deleteCourse = async(id)=>{
         const token = localStorage.getItem("token");
         try{
-            const response = await fetch(`study-hub-production-4e64.up.railway.app/api/materials/${id}`,{
+            const response = await fetch(`https://study-hub-production-4e64.up.railway.app/api/materials/${id}`,{
                 method : "DELETE",
                 headers : {
                     "Authorization": `Bearer ${token}`
@@ -122,7 +122,7 @@ function Courses(){
 
         try{
             const token = localStorage.getItem("token");
-            const response =await fetch(`study-hub-production-4e64.up.railway.app/api/materials/${courseId}/progress`, {
+            const response =await fetch(`https://study-hub-production-4e64.up.railway.app/api/materials/${courseId}/progress`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

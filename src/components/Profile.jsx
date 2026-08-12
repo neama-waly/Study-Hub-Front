@@ -22,7 +22,7 @@ function Profile(){
 
         try{
             const token = localStorage.getItem("token");
-            const response = await fetch("study-hub-production-4e64.up.railway.app/api/profile/update-avatar",{
+            const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/profile/update-avatar",{
                 method : "PUT",
                 headers: {
                    "Authorization": `Bearer ${token}`,   
@@ -37,7 +37,7 @@ function Profile(){
             }
             if (data.user && data.user.profileImage) {
                     const cleanPath = data.user.profileImage.replace(/\\/g, "/");
-                    setPhoto(`study-hub-production-4e64.up.railway.app/${cleanPath}`);
+                    setPhoto(`https://study-hub-production-4e64.up.railway.app/${cleanPath}`);
       }
 
         }catch(e){
@@ -50,7 +50,7 @@ function Profile(){
     const getName = async()=>{
       try{
         const token = localStorage.getItem("token");
-        const response = await fetch("study-hub-production-4e64.up.railway.app/api/profile",{
+        const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/profile",{
             method : "GET",
             headers : {
                 "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function Profile(){
 
         if (data.profileImage && data.profileImage !== "default-avatar.png") {
             const cleanPath = data.profileImage.replace(/\\/g, "/");
-            setPhoto(`study-hub-production-4e64.up.railway.app${cleanPath}`);
+            setPhoto(`https://study-hub-production-4e64.up.railway.app${cleanPath}`);
       }
         }catch(e){
             console.log(e);

@@ -23,7 +23,7 @@ function Notes(){
         try{
             const token = localStorage.getItem("token");
             setLoading(true);
-            const data = await fetch(`study-hub-production-4e64.up.railway.app/api/notes?search=${encodeURIComponent(query)}`,{
+            const data = await fetch(`https://study-hub-production-4e64.up.railway.app/api/notes?search=${encodeURIComponent(query)}`,{
   method: "GET",
   headers: {
     "Authorization": `Bearer ${token}`,
@@ -52,7 +52,7 @@ function Notes(){
         const token = localStorage.getItem("token");
         if(!title.trim()||!content.trim()) return;
         try{
-        const response = await fetch('study-hub-production-4e64.up.railway.app/api/notes', {
+        const response = await fetch('https://study-hub-production-4e64.up.railway.app/api/notes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ function Notes(){
     }
     const deleteAll = async()=>{
     try {
-        const response = await fetch('study-hub-production-4e64.up.railway.app/api/notes', {
+        const response = await fetch('https://study-hub-production-4e64.up.railway.app/api/notes', {
             method: 'delete', 
         });
 
@@ -95,7 +95,7 @@ function Notes(){
 };
     const deleteNote = async(id)=>{
         try{
-             const response = await fetch(`study-hub-production-4e64.up.railway.app/api/notes/${id}`, {
+             const response = await fetch(`https://study-hub-production-4e64.up.railway.app/api/notes/${id}`, {
             method: 'delete', 
         });            
         if(response.ok){

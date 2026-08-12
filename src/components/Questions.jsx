@@ -25,7 +25,7 @@ function Questions(){
             try{
                 const token = localStorage.getItem("token");
                 setLoading(true);
-                const data = await fetch(`study-hub-production-4e64.up.railway.app/api/questions?search=${encodeURIComponent(query)}`,{
+                const data = await fetch(`https://study-hub-production-4e64.up.railway.app/api/questions?search=${encodeURIComponent(query)}`,{
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`, 
@@ -54,7 +54,7 @@ function Questions(){
             const token = localStorage.getItem("token");
             if(!subject.trim() || !content.trim()) return;
             try{
-                const respone = await fetch('study-hub-production-4e64.up.railway.app/api/questions',{
+                const respone = await fetch('https://study-hub-production-4e64.up.railway.app/api/questions',{
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ function Questions(){
         }
     const deleteOne = async(id)=>{
             try{
-                const response = await fetch(`study-hub-production-4e64.up.railway.app/api/questions/${id}`, {
+                const response = await fetch(`https://study-hub-production-4e64.up.railway.app/api/questions/${id}`, {
             method: 'delete', 
         });  
         if (response.ok){

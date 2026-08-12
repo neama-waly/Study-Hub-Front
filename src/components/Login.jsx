@@ -8,7 +8,7 @@ function Login(){
     const handleLog = async(e)=>{
         e.preventDefault();
     try{
-    const response = await fetch("study-hub-production-4e64.up.railway.app/api/login",{
+    const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/login",{
         method : "POST",
         headers : {
           'Content-Type' : 'application/json',
