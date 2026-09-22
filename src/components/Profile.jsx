@@ -22,7 +22,7 @@ function Profile(){
 
         try{
             const token = localStorage.getItem("token");
-            const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/profile/update-avatar",{
+            const response = await fetch("https://study-hub-brown-mu.vercel.app/api/profile/update-avatar",{
                 method : "PUT",
                 headers: {
                    "Authorization": `Bearer ${token}`,   
@@ -50,7 +50,7 @@ function Profile(){
     const getName = async()=>{
       try{
         const token = localStorage.getItem("token");
-        const response = await fetch("https://study-hub-production-4e64.up.railway.app/api/profile",{
+        const response = await fetch("https://study-hub-brown-mu.vercel.app/api/profile",{
             method : "GET",
             headers : {
                 "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function Profile(){
     const imgPath = data.profileImage.replace(/\\/g, "/");
     const fullUrl = imgPath.startsWith("http") 
         ? imgPath 
-        : `https://study-hub-production-4e64.up.railway.app/${imgPath.replace(/^\//, '')}`;
+        : `https://study-hub-brown-mu.vercel.app/${imgPath.replace(/^\//, '')}`;
         
     setPhoto(fullUrl);
 }

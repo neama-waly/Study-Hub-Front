@@ -79,7 +79,7 @@ function Notes(){
     }
     const deleteAll = async()=>{
     try {
-        const response = await fetch('https://study-hub-production-4e64.up.railway.app/api/notes', {
+        const response = await fetch('https://study-hub-brown-mu.vercel.app/api/notes', {
             method: 'delete', 
         });
 
@@ -95,7 +95,7 @@ function Notes(){
 };
     const deleteNote = async(id)=>{
         try{
-             const response = await fetch(`https://study-hub-production-4e64.up.railway.app/api/notes/${id}`, {
+             const response = await fetch(`https://study-hub-brown-mu.vercel.app/api/notes/${id}`, {
             method: 'delete', 
         });            
         if(response.ok){
